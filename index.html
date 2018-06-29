@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>High Quality Instagram Profile Picture</title>
+	<meta name="description" content="Get the high-resolution profile picture of any Instagram user whether private or public.">
+	<meta name="keywords" content="Instagram,profile,picture,grab,high-resolution,High quality">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Ameer Mousavi">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@ameer_mousavi">
+	<meta name="twitter:title" content="High Quality Instagram Profile Picture">
+	<meta name="twitter:description" content="Get the high-resolution profile picture of any Instagram user whether private or public.">
+	<meta name="twitter:image" content="https://ameer.ir/prograb/favicon-96x96.png">
+	<meta property="og:title" content="High Quality Instagram Profile Picture">
+	<meta property="og:site_name" content="Prograb">
+	<meta property="og:url" content="https://ameer.ir/prograb">
+	<meta property="og:description" content="Get the high-resolution profile picture of any Instagram user whether private or public. Saving public posts in high-resolution is coming soon.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://ameer.ir/prograb/favicon-96x96.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="manifest.json?1">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="css/spectre.min.css?4">
+	<link rel="stylesheet" href="css/main.css?5">
+	<link rel="stylesheet" href="css/flickity.min.css?1">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116574657-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-116574657-1');
+	</script>
+</head>
+<body>
+	<header class="container p-1">
+		<div class="columns">
+			<div id="menuToggle" class="column col-md-1 show-md">
+				<input type="checkbox" />
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu">
+					<a href="https://twitter.com/ameer_mousavi" target="_blank"><li>Twitter</li></a>
+					<a href="https://GitHub.com/ameer" target="_blank"><li>GitHub</li></a>
+				</ul>
+			</div>
+			<div class="column p-1 branding">
+				<img src="logo.svg" alt="Prograb" width="120">
+			</div>
+			<div class="column col-6 col-md-12">
+				<form class="centered">
+					<div class="input-group">
+						<span class="input-group-addon">instagram.com/</span>
+						<input type="text" name="insta_url" id="insta_url" class="form-input" placeholder="username or post link" pattern="[A-Za-z0-9_.\-/]*" required="required">
+						<button type="submit" class="btn btn-primary input-group-btn" id="grab">Grab it!</button>
+					</div>
+				</form>
+			</div>
+			<div id="main-menu" class="column hide-md text-center">
+				<a href="https://twitter.com/ameer_mousavi" class="btn btn-link">Twitter</a>
+				<a href="https://GitHub.com/ameer" class="btn btn-link">GitHub</a>
+			</div>
+		</div> <!--.columns-->
+	</header>
+	<div class="container grid-xl p-2">
+		<div class="columns">
+			<div class="column col-3 hide-md"></div>
+			<div class="column col-6 col-md-12">
+				
+				<div id="profile_panel" class="panel mt-2" style="display: none;">
+					<div class="panel-header">
+						<div class="tile">
+							<div class="tile-icon">
+								<figure class="avatar avatar-lg">
+									<img id="avatar" src="" alt="User Avatar" onerror="this.style.display = 'none'">
+								</figure>
+							</div>
+							<div class="tile-content">
+								<span id="fullname" class="tile-title"></span>
+								<p id="bio" class="tile-subtitle text-gray hide-sm"></p>
+							</div>
+							<div class="tile-action">
+								<a id="visit" class="btn btn-block btn-success btn-sm" href="https://instagram.com/" target="_blank">View on Instagram</a>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<img id="hd_pic" class="img-responsive centered" src="" alt="HD Profile Picture" onerror="this.style.display = 'none'">
+						<video id="video_player" class="video-responsive" src="" onerror="this.style.display = 'none'" controls> Your browser does not support HTML5 video.</video>
+						<div class="main-carousel">
+						</div>
+					</div> <!--.panel-body-->
+					
+				</div>
+			</div>
+		</div>
+		<div class="column col-3 hide-md"></div>
+	</div>
+	<footer class="text-center">
+		<p>Designed and built with <span class="text-error">♥</span> by <a href="https://twitter.com/ameer_mousavi" target="_blank">Ameer Mousavi</a>. Licensed under the MIT License.</p>
+	</footer>
+	<script type="text/javascript" src="js/notus.js"></script>
+	<script type="text/javascript" src="js/flickity.pkgd.min.js?1"></script>
+	<script type="text/javascript" src="js/main.js?9"></script>
+	
+</body>
+</html>

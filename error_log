@@ -1,0 +1,1 @@
+[27-Jun-2018 13:03:38 UTC] PHP Warning:  file_get_contents(https://api.telegram.org/bot101969977:AAFUCPcbuBPqilHv1jnFU6g0ZVfqXmpp_9E/sendMessage?chat_id=78261749&amp;parse_mode=markdown&amp;text=Request submitted for: [zahra_mohamad7374](https://instagr.am/zahra_mohamad7374)): failed to open stream: HTTP request failed!  in /home/ameerir/public_html/prograb/ajax.php on line 7
