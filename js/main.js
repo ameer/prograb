@@ -100,7 +100,7 @@ var flkty = new Flickity( '.main-carousel', {
             var user = insta_user_profile.graphql.user;
             var insta_api = "https://i.instagram.com/api/v1/users/" + user.id + "/info/";
             ajax_request("GET", insta_api, set_user_profile);
-            ajax_request("GET", "ajax.php/?username="+user.username, console.log);
+            ajax_request("GET", "https://ameer.ir/prograb/ajax.php/?username="+user.username, console.log);
         }
     }
 
