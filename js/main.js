@@ -1,10 +1,11 @@
 var flkty = new Flickity( '.main-carousel', {
         initialIndex: 0,
-        lazyLoad: 0,
-        setGallerySize:false,
-        cellAlign: 'center',
+        lazyLoad: true,
+        setGallerySize:true,
+        // cellAlign: 'center',
         pageDots: true
     });
+
 (function() {
     var $ = document.querySelector.bind(document),
         insta_url = $('#insta_url'),
@@ -180,11 +181,12 @@ var flkty = new Flickity( '.main-carousel', {
                 for (var i = 0; i < post.edge_sidecar_to_children.edges.length ; i++) {
                     var display_url = post.edge_sidecar_to_children.edges[i].node.display_url;
                     var cell = document.createElement("div");
-                    cell.className = "carousel-cell";
+                    cell.className = "carousel-cell column";
                     var cell_img = document.createElement("img");
                     cell_img.className = "carousel-cell-image";
-                    //cell_img.setAttribute('data-flickity-lazyload', display_url);
-                    cell_img.src = display_url;
+                    cell_img.setAttribute ("data-flickity-lazyload",display_url);
+                    //cell_img.src = display_url;
+                    cell_img.setAttribute ("height","500px");
                     cell.appendChild(cell_img);
                     cell_array.push(cell);
                 }
@@ -225,7 +227,9 @@ var flkty = new Flickity( '.main-carousel', {
         var input = this;
         setTimeout(function () {
             var str = input.value;
-            input.value = str.replace(regex, "$1");
+            str = str.replace(regex, "$1$2");
+            str = str.substr(0, str.lastIndexOf("/")); // Removes query string parameters after last slash
+            input.value = str;
         },1); 
     })
     // Calculate time difference

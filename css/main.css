@@ -159,27 +159,11 @@ footer p {margin: .5rem;}
 .flickity-viewport {
   transition: height 0.2s;
 }
+
+/* move page dots into carousel */
+.flickity-page-dots { bottom: 10px; }
 .main-carousel {
-  height: 800px;
-}
-.carousel-cell {
-  /* width: 100%; */ /* full width */
-  height: 800px;
-  background: #222;
-  margin-right: 10px;
-  /* center images in cells with flexbox */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel.is-fullscreen .carousel-cell {
-  height: 100%;
-}
-
-.carousel-cell img {
-  display: block;
-  max-height: 100%;
+  /* height: 100px; */
 }
 /**
  * notus v0.3.1
