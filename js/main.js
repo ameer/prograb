@@ -19,7 +19,7 @@ var flkty = new Flickity( '.main-carousel', {
         visit = $('#visit'),
         topnav = $('#topnav')
         panel = $('#profile_panel');
-    var regex = /https:\/\/www\.instagram\.com\/([A-Za-z0-9_.\-]+)(\/.*)?/;
+    var regex = /https:\/\/(www.)?\instagram\.com\/(p\/)?([A-Za-z0-9_.\-]+)([\/?])?.+/;
 	var notif = notus({
 		autoClose: true,
 		autoCloseDuration: 3000,
@@ -227,8 +227,7 @@ var flkty = new Flickity( '.main-carousel', {
         var input = this;
         setTimeout(function () {
             var str = input.value;
-            str = str.replace(regex, "$1$2");
-            str = str.substr(0, str.lastIndexOf("/")); // Removes query string parameters after last slash
+            str = str.replace(regex, "$2$3"); // $2 is p/ and $3 is username or post codename
             input.value = str;
         },1); 
     })
